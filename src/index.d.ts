@@ -1,7 +1,5 @@
 import { type Plugin } from "vite";
-export interface CheckEnvOptions {
-  injections: CheckEnv[];
-}
+
 export interface CheckEnv {
   [index: string]: {
     type: 'custom' | 'vite',
@@ -9,6 +7,5 @@ export interface CheckEnv {
     required?: boolean,
   } | string | undefined
 }
-declare function CheckEnv(config: CheckEnvOptions): Plugin;
 
-export { CheckEnv };
+export default function CheckEnv(config: CheckEnv): Plugin;
