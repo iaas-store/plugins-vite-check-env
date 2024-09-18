@@ -87,4 +87,4 @@ If a required environment variable is not found, the plugin will throw an error 
 * **Production**: Set up default values for non-critical variables, while ensuring that required variables are always set.
 
 ## License
-MIT
+ISC
