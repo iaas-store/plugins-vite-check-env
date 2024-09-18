@@ -1,0 +1,43 @@
+{
+  "name": "plugin-vite-check-env",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "vite build -w",
+    "build": "vite build"
+  },
+  "type": "module",
+  "keywords": [
+    "vite plugin",
+    "vite load env",
+    "env loader",
+    "vite env",
+    "env",
+    "vite plugin check env"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iaas-store/plugins-vite-check-env.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^5.4.6"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "@typescript-eslint/eslint-plugin": "^8.6.0",
+    "@typescript-eslint/parser": "^8.6.0",
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-unicorn": "^55.0.0",
+    "typescript": "^5.6.2"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8"
+  }
+}
