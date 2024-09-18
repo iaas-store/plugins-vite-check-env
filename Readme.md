@@ -20,12 +20,12 @@ In your `vite.config.js` or `vite.config.ts`, import and configure the plugin:
 
 ```ts
 import { defineConfig } from 'vite';
-import CheckEbv from 'plugin-vite-check-env';
+import CheckEnv from 'plugin-vite-check-env';
 
 export default defineConfig({
   plugins: [
     // ...other plugins
-    CheckEbv({
+    CheckEnv({
       VITE_DOMAIN_API: undefined, // Required variable with no default value
       VITE_TIMEOUT_REDIRECT: 1000, // Optional variable with a default value
       PORT: { type: 'custom', value: 3000 }, // Custom environment variable with default value
