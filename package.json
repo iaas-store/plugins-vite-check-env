@@ -23,9 +23,6 @@
   "dependencies": {
     "vite": "^5.4.6"
   },
-  "files": [
-    "dist"
-  ],
   "devDependencies": {
     "@types/node": "^22.5.5",
     "@typescript-eslint/eslint-plugin": "^8.6.0",
