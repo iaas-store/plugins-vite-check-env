@@ -21,23 +21,21 @@ export default function CheckEnv(options: IOptions): Plugin {
         if (typeof options[_] === 'object') {
           const env = options[_];
           const checkedArea = env.type === 'vite' ? config.env : process.env;
-          if (env.type === 'vite') {
-            if (checkedArea[_]) return;
+          if (checkedArea[_]) return;
 
-            if (env.required) {
-              stopWork = true;
-              console.error(`The required environment variable [${_}] has not been declared`)
-              return
-            }
-
-            if (!env.value) {
-              stopWork = true;
-              console.error(`The default value for the environment variable [${_}] is not defined`)
-              return;
-            }
-            
-            checkedArea[_] = env.value
+          if (env.required) {
+            stopWork = true;
+            console.error(`The required environment variable [${_}] has not been declared`)
+            return
           }
+
+          if (!env.value) {
+            stopWork = true;
+            console.error(`The default value for the environment variable [${_}] is not defined`)
+            return;
+          }
+          
+          checkedArea[_] = env.value
         }
 
         if (config.env[_]) return;
